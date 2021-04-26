@@ -1,0 +1,12 @@
+@import '../../mq';
+
+@media #{$phoneLandscape} {
+    @import '../mobile';
+
+    & {
+      .main-bg {
+//      background-position: 27% bottom;
+//      background-size: 225%;
+    }
+    }
+}

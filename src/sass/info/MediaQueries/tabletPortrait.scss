@@ -1,0 +1,31 @@
+@import '../../mq';
+
+@media #{$tabletPortrait} {
+  @import '../mobile';
+
+  & {
+    .main {
+      .testimonials {
+        .btn-group {
+          flex-wrap: wrap;
+          display: flex;
+          justify-content: space-between;
+          max-width: 452px;
+
+          .btn.btn-lg {
+            max-width: 260px;
+
+            &:first-child {
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .tag-btn {
+        margin-right: 10px;
+      }
+    }
+
+  }
+}
