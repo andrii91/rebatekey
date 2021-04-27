@@ -1,21 +1,86 @@
 & {
   .main-bg {
-    background: url('../images/main-bg_mob.webp'), linear-gradient(180deg, #1AA5BD 0%, #188CAE 100%);
-    background-repeat: no-repeat;
-    background-position: 27% bottom;
-    background-size: 900px;
+    background: url(../images/main-bg_mob.webp) 57px calc(100% - 287px) no-repeat;
+    background-size: 350px;
+    background-size: 93.333vw;
+    overflow: hidden;
+
+    #buyer-sign-up-form {
+      position: relative;
+      min-height: 227px;
+
+      .btn-coupon,
+      .text-white {
+        z-index: 2;
+        position: relative;
+      }
+
+      &:before {
+        content: "";
+        background: linear-gradient(180deg, #1AA5BD 0%, #188CAE 100%);
+        height: calc(100% + 60px);
+        width: 150vw;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%);
+        z-index: 0;
+      }
+    }
 
     .head-logo {
       justify-content: flex-start;
-      max-width: 285px;
+      max-width: 152px;
+      margin-bottom: 46px;
 
       li {
-        margin-bottom: 21px;
-        margin-right: 26px;
+        margin-bottom: 9px;
+        margin-right: 18px;
 
-        svg path {
-          //          filter: invert(1);
-          fill: #fff;
+        &:nth-child(1) {
+          svg {
+            width: 27px;
+            height: 15px;
+          }
+        }
+
+        &:nth-child(2) {
+          svg {
+            width: 54px;
+            height: 20px;
+          }
+        }
+
+        &:nth-child(3) {
+          svg {
+            width: 25px;
+          }
+        }
+
+        &:nth-child(4) {
+          svg {
+            width: 25px;
+          }
+        }
+
+        &:nth-child(6) {
+          svg {
+            width: 53px;
+          }
+        }
+
+        &:nth-child(5) {
+          svg {
+            width: 85px;
+
+          }
+        }
+
+        svg {
+          //          max-height: 20px;
+          width: auto;
+
+          path {}
         }
       }
     }
@@ -23,13 +88,13 @@
     h1 {
       font-size: 30px;
       line-height: 36px;
-      color: #fff;
+      //      color: #fff;
     }
 
     h4 {
       font-size: 15px;
       line-height: 22px;
-      color: #FFFFFF;
+      //      color: #FFFFFF;
       max-width: 300px;
     }
   }
@@ -37,7 +102,7 @@
   .main {
     .logo-title {
       margin-top: 35px;
-      color: #fff;
+      //      color: #fff;
       font-size: 13.2316px;
       line-height: 100%;
     }
@@ -76,6 +141,7 @@
 
     .testimonials {
       padding: 45px 0 60px;
+
       .btn-group {
         flex-wrap: wrap;
         display: flex;
@@ -106,31 +172,38 @@
       margin-right: auto;
       justify-content: center;
       align-items: center;
+
       .btn-listing-type {
         padding: 16px 20px;
         width: 33.33%;
       }
     }
+
     .map-bg {
       background-size: 540px;
       background-position: center;
     }
+
     .bg-primary-dark {
       min-height: 390px;
       display: flex;
       align-items: center;
       align-content: center;
-      
+
     }
+
     .marketplaces-item {
       justify-content: center;
-       .section-subheading {
+
+      .section-subheading {
         width: 100%;
-         text-align: center;
-         margin-bottom: 25px;
+        text-align: center;
+        margin-bottom: 25px;
       }
+
       a {
         margin: 15px;
+
         img {
           max-height: 23px;
         }
@@ -140,5 +213,11 @@
 
   .xs-none {
     display: none;
+  }
+
+  .navbar-brand {
+    svg {
+      max-width: 123px;
+    }
   }
 }

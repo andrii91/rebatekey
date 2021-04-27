@@ -4,6 +4,10 @@
   @import '../mobile';
 
   & {
+    .main-bg {
+      background-size: 600px;
+    }
+
     .main {
       .testimonials {
         .btn-group {

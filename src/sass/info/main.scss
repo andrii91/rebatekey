@@ -98,9 +98,9 @@ body {
   #buyer-sign-up-form {
     max-width: 320px;
 
-    .fv-plugins-message-container {
+    /*.fv-plugins-message-container {
       position: absolute;
-    }
+    }*/
 
     .form-group {
       position: relative;
@@ -109,8 +109,7 @@ body {
   }
 
   form.fv-plugins-bootstrap .sr-only + .form-controls .fv-plugins-icon {
-    top: 50%;
-    transform: translateY(-50%);
+    top: 7px;
   }
 
   .nav-listing-types {
@@ -456,4 +455,10 @@ footer {
     line-height: 100%;
     color: #000000;
   }
+}
+
+.btn-primary-light {
+    background-color: #1BA3BD;
+    border-color: #1BA3BD;
+  border-radius: 3px;
 }
