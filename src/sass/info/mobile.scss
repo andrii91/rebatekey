@@ -1,13 +1,25 @@
 & {
   .main-bg {
-    background: url(../images/main-bg_mob.webp) 57px calc(100% - 287px) no-repeat;
-    background-size: 350px;
-    background-size: 93.333vw;
+
+    background: 0 0;
     overflow: hidden;
 
     #buyer-sign-up-form {
       position: relative;
-      min-height: 227px;
+
+      &:after {
+        content: "";
+        background: url(../images/main-bg_mob.webp) center no-repeat;
+        background-size: 100%;
+        width: 93.333vw;
+        height: 52.800vw;
+        position: absolute;
+        left: 57px;
+        top: -60.6vw;
+        top: 0;
+        transform: translateY(-114%);
+        z-index: 0;
+      }
 
       .btn-coupon,
       .text-white {
@@ -24,7 +36,7 @@
         top: 50%;
         left: 50%;
         transform: translateX(-50%) translateY(-50%);
-        z-index: 0;
+        z-index: 1;
       }
     }
 
@@ -215,9 +227,19 @@
     display: none;
   }
 
+  .xs-block {
+    display: inherit;
+  }
+
   .navbar-brand {
     svg {
       max-width: 123px;
     }
+  }
+
+  .form-more {
+    display: none;
+    position: relative;
+    z-index: 2;
   }
 }

@@ -1,6 +1,10 @@
 $(document).ready(function() { 
-  $('.head-img img').click(function(){
-    var destination = $(".program").offset().top - 0;
-    $("body,html").animate({ scrollTop: destination}, 500 );
-  });
+  $('.toggle-form').click(function(e){
+    e.preventDefault();
+//    $(this).parents('form').addClass('show-form');
+    $(this).parents('form').find('.form-more').slideDown(200);
+    $(this).parents('form').find('.btn-coupon').text('Save');
+    $(this).hide();
+    
+  })
 });

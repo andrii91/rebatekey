@@ -1,12 +1,12 @@
 @import '../../mq';
 
 @media #{$phoneLandscape} {
-    @import '../mobile';
+  @import '../mobile';
 
-    & {
-      .main-bg {
-//      background-position: 27% bottom;
-//      background-size: 225%;
+  & {
+    .main-bg #buyer-sign-up-form:after {
+      transform: translateY(-107%);
+      z-index: 0;
     }
-    }
+  }
 }

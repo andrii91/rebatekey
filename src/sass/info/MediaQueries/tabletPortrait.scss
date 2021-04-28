@@ -5,7 +5,29 @@
 
   & {
     .main-bg {
-      background-size: 600px;
+    background: url(../images/main-bg.webp) 68% top no-repeat;
+    background-size: cover;
+    min-height: 420px;
+      #buyer-sign-up-form {
+        .xs-block {
+          display: none;
+        }
+
+        .xs-none,
+        .form-more {
+          display: block;
+        }
+
+        &:after,
+        &:before {
+          display: none;
+          width: 600px;
+          height: 389px;
+          left: 57px;
+          top: -389px;
+          transform: none;
+        }
+      }
     }
 
     .main {
@@ -31,5 +53,10 @@
       }
     }
 
+  }
+
+  .btn-lg,
+  .btn-group-lg > .btn {
+    padding: .5625rem 1.875rem;
   }
 }

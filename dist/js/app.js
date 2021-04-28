@@ -1,1 +1,1 @@
-$(document).ready(function(){$(".head-img img").click(function(){var o=$(".program").offset().top-0;$("body,html").animate({scrollTop:o},500)})});
+$(document).ready(function(){$(".toggle-form").click(function(t){t.preventDefault(),$(this).parents("form").find(".form-more").slideDown(200),$(this).parents("form").find(".btn-coupon").text("Save"),$(this).hide()})});

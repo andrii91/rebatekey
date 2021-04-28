@@ -35,8 +35,10 @@
       padding: .5625rem 1.875rem;
 
     }
-    .main-bg #buyer-sign-up-form:before {
+    .main-bg #buyer-sign-up-form {
+      &:before, &:after {
       display: none;
+    }
     }
     .head-logo {
       max-width: 200px;
