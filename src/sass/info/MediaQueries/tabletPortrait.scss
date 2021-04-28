@@ -5,9 +5,10 @@
 
   & {
     .main-bg {
-    background: url(../images/main-bg.webp) 68% top no-repeat;
-    background-size: cover;
-    min-height: 420px;
+      background: url(../images/main-bg.webp) 68% top no-repeat;
+      background-size: cover;
+      min-height: 420px;
+
       #buyer-sign-up-form {
         .xs-block {
           display: none;
@@ -43,6 +44,7 @@
 
             &:first-child {
               margin-bottom: 0;
+              margin-right: 16px;
             }
           }
         }
@@ -50,6 +52,11 @@
 
       .tag-btn {
         margin-right: 10px;
+      }
+
+      .how_it_work {
+        margin-left: 30px;
+        margin-right: 30px;
       }
     }
 
