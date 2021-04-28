@@ -466,8 +466,8 @@ footer {
   border-radius: 3px;
 
   &:hover {
-    background-color: #1BA3BD;
-    border-color: #1BA3BD;
+    background-color: darken(#1BA3BD,2%);
+    border-color: darken(#1BA3BD,2%);
   }
 }
 
