@@ -13,7 +13,7 @@ var uglify = require('gulp-uglify');
 var uncss = require('gulp-uncss');
  
 
-gulp.task('sass', function() {
+gulp.task('sass', async function() {
     return sass('src/sass/main.scss', { sourcemap: true, style: 'compact' })
         .on('error', sass.logError)
         .pipe(sourcemaps.init({loadMaps: true}))
@@ -24,7 +24,7 @@ gulp.task('sass', function() {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('js', function() {
+gulp.task('js', async function() {
     gulp.src([
             'src/js/component.js'
         ])
@@ -32,10 +32,10 @@ gulp.task('js', function() {
         .pipe(uglify())
         .pipe(gulp.dest('dist/js'));
 });
-gulp.task('js_v', function() {
+gulp.task('js_v', async function() {
     gulp.src([
             'src/js/vendor/jquery.js',
-            // 'src/js/vendor/bootstrap.min.js',
+            'src/js/vendor/bootstrap.min.js',
             // 'src/js/vendor/inputmask.js',
             // 'src/js/vendor/jquery.inputmask.js',
             // 'src/js/vendor/jquery.animateNumber.min.js',
@@ -48,24 +48,19 @@ gulp.task('js_v', function() {
         .pipe(gulp.dest('dist/js'));
 });
 
-gulp.task('images', function(){
+gulp.task('images', async function(){
     return gulp.src('src/images/**/*.*')
-        .pipe(cache(imagemin()))
+        //.pipe(cache(imagemin()))
         .pipe(gulp.dest('dist/images'))
 });
 
-gulp.task('images_css', function(){
-    return gulp.src('src/sass/info/images/**/*.*')
-        .pipe(cache(imagemin()))
-        .pipe(gulp.dest('dist/css/images'))
-});
 
-gulp.task('pages', function(){
+gulp.task('pages', async function(){
     return gulp.src('src/*.html')
         .pipe(gulp.dest('dist'))
 });
 
-gulp.task('uncss', function () {
+gulp.task('uncss', async function () {
     return gulp.src('dist/css/app.css')
         .pipe(uncss({
             html: ['dist/*.html']
@@ -73,7 +68,7 @@ gulp.task('uncss', function () {
         .pipe(gulp.dest('dist/css'));
 });
 
-gulp.task('webserver', function() {
+gulp.task('webserver', async function() {
     gulp.src('dist')
         .pipe(server({
             livereload: {
@@ -89,12 +84,14 @@ gulp.task('webserver', function() {
         }));
 });
 
-gulp.task('default', function() {
-    gulp.start('pages', 'js', 'js_v', 'sass', 'images', 'images_css', 'webserver');
-    gulp.watch('src/*.html', ['pages']);
-    gulp.watch('src/js/*.js', ['js']);
-    gulp.watch('src/js/vendor/*.js', ['js_v']);
-    gulp.watch('src/sass/**/*.scss', ['sass']);
-    gulp.watch('src/sass/info/images/*', ['images_css']);
-    gulp.watch('src/images/**/*.*', ['images']);
+gulp.task('default', async function() {
+    //gulp.start('pages', 'js', 'js_v', 'sass', 'images', 'images_css', 'webserver');
+    gulp.watch('src/*.html', gulp.parallel('pages') );
+    gulp.watch('src/js/*.js', gulp.parallel('js') );
+    gulp.watch('src/js/vendor/*.js', gulp.parallel('js_v') );
+    gulp.watch('src/sass/**/*.scss', gulp.parallel('sass') );
+    gulp.watch('src/images/**/*.*',  gulp.parallel('images'));
 });
+
+
+

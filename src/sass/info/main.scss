@@ -24,21 +24,13 @@ body {
       font-family: Lato;
       font-style: normal;
       font-weight: bold;
-      font-size: 48px;
-      line-height: 58px;
+      font-size: 64px;
+      line-height: 77px;
       letter-spacing: -0.02em;
       color: #272727;
     }
 
-    h4 {
-      font-family: Lato;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 24px;
-      line-height: 36px;
-      color: #272727;
-      max-width: 597px;
-    }
+   
   }
 
   form.fv-plugins-bootstrap .fv-plugins-icon.fa-asterisk {
@@ -70,30 +62,7 @@ body {
     opacity: 0.5;
   }
 
-  .head-logo {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    max-width: 557px;
-    flex-wrap: wrap;
 
-    li {
-      margin-right: 20px;
-
-      &:last-child {
-        margin-right: 0;
-      }
-
-      img,
-      svg {
-        max-width: 100%;
-        max-height: 35px;
-      }
-    }
-  }
 
   #buyer-sign-up-form {
     max-width: 320px;
@@ -140,7 +109,7 @@ body {
     }
   }
 
-  .tag-items {
+/*  .tag-items {
     max-width: 700px;
     margin-left: auto;
     margin-right: auto;
@@ -148,8 +117,8 @@ body {
     justify-content: space-between;
     align-items: center;
 
-  }
-
+  }*/
+/*
   .tag-btn {
     font-family: Lato;
     font-style: normal;
@@ -189,9 +158,9 @@ body {
         transform: scale(1.1);
       }
     }
-  }
+  }*/
 
-  .stores-btn {
+/*  .stores-btn {
     color: #1991B1;
     border-color: #1991B1;
 
@@ -202,27 +171,27 @@ body {
     &:hover {
       color: #1991B1;
     }
-  }
+  }*/
 
-  .rebates-btn {
+/*  .rebates-btn {
     color: #FC683F;
     border-color: #FC683F;
 
     &:hover {
       color: #FC683F;
     }
-  }
+  }*/
 
-  .coupons-btn {
+/*  .coupons-btn {
     color: #54AD6C;
     border-color: #54AD6C;
 
     &:hover {
       color: #54AD6C;
     }
-  }
+  }*/
 
-  .deals-btn {}
+//  .deals-btn {}
 
   .how_it_work {
     //    max-width: 1720px;
@@ -488,4 +457,23 @@ footer {
     }
     
   }
+}
+.bg-primary-transparent {
+  background: #F6FAFC;
+}
+
+.bg-rebates {
+  background: #FC683F;
+}
+
+.bg-coupons {
+  background: #54AD6C;
+}
+
+.bg-deals {
+  background: #5C5C5C;
+}
+
+.bg-stores {
+  background: #1991B1;
 }
