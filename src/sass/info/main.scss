@@ -319,6 +319,10 @@ footer {
 }
 
 .main-tmpl {
+  color: #272727;
+  h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    color: #000036;
+  }
   .btn:not(.tag-btn) {
     font-weight: bold;
     font-family: Lato;
@@ -356,3 +360,7 @@ footer {
 .cursor-pointer {
   cursor: pointer;
 }
+
+
+
+
