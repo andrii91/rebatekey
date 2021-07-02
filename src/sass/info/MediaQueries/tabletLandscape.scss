@@ -21,15 +21,23 @@
     .logo-title {
       color: #272727;
     }
-.btn-lg,
+
+    .btn-lg,
     .btn-group-lg > .btn {
       padding: .5625rem 1.875rem;
 
     }
+
     .main-bg #buyer-sign-up-form {
-      &:before, &:after {
-      display: none;
+
+      &:before,
+      &:after {
+        display: none;
+      }
     }
+    
+    .btn-see {
+      max-width: 197px;
     }
 
   }
